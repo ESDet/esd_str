@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the esd_str feature.
+ */
+
+include_once 'esd_str.features.inc';
