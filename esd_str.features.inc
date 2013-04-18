@@ -42,10 +42,27 @@ function esd_str_default_entity_boxes_type() {
 function esd_str_image_default_styles() {
   $styles = array();
 
-  // Exported image style: 340w.
-  $styles['340w'] = array(
-    'name' => '340w',
-    'effects' => array(),
+  // Exported image style: 340wNh.
+  $styles['340wNh'] = array(
+    'name' => '340wNh',
+    'effects' => array(
+      1 => array(
+        'label' => 'Scale',
+        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
+        'effect callback' => 'image_scale_effect',
+        'dimensions callback' => 'image_scale_dimensions',
+        'form callback' => 'image_scale_form',
+        'summary theme' => 'image_scale_summary',
+        'module' => 'image',
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => '340',
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => '1',
+      ),
+    ),
   );
 
   // Exported image style: 340w211h.
@@ -70,9 +87,9 @@ function esd_str_image_default_styles() {
     ),
   );
 
-  // Exported image style: 580w.
-  $styles['580w'] = array(
-    'name' => '580w',
+  // Exported image style: 580wNh.
+  $styles['580wNh'] = array(
+    'name' => '580wNh',
     'effects' => array(
       1 => array(
         'label' => 'Scale',

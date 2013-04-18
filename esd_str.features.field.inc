@@ -1350,7 +1350,7 @@ function esd_str_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'front_page_slide',
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Slide images will be scaled and cropped to 580x360 - your image should have similar proportions',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -1370,7 +1370,7 @@ function esd_str_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'fences_wrapper' => 'div',
+      'fences_wrapper' => 'no_wrapper',
       'field_name' => 'field_slide_image',
       'label' => 'Image',
       'required' => 1,
@@ -1381,7 +1381,7 @@ function esd_str_field_default_fields() {
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
         'max_resolution' => '',
-        'min_resolution' => '',
+        'min_resolution' => '580x360',
         'title_field' => 0,
         'user_register_form' => FALSE,
       ),
@@ -1397,6 +1397,10 @@ function esd_str_field_default_fields() {
             'auto' => 'auto',
             'icon_link' => 0,
             'image' => 0,
+            'image_340wNh' => 0,
+            'image_340w211h' => 0,
+            'image_580wNh' => 0,
+            'image_580w360h' => 0,
             'image_large' => 0,
             'image_media_thumbnail' => 0,
             'image_medium' => 0,
@@ -2728,6 +2732,7 @@ function esd_str_field_default_fields() {
   t('Media Outlet');
   t('Placeholder for Social Share Privacy');
   t('Slide Caption');
+  t('Slide images will be scaled and cropped to 580x360 - your image should have similar proportions');
   t('Social share buttons');
   t('Tags:');
   t('This field should be a full url or relative link path. ');
