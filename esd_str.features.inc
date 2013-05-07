@@ -19,20 +19,8 @@ function esd_str_ctools_plugin_api() {
  */
 function esd_str_default_entity_boxes_type() {
   $items = array();
-  $items['dyk_box'] = entity_import('entity_boxes_type', '{
-    "type" : "dyk_box",
-    "label" : "dyk_box",
-    "weight" : "0",
-    "data" : "",
-    "rdf_mapping" : []
-  }');
-  $items['rich_box'] = entity_import('entity_boxes_type', '{
-    "type" : "rich_box",
-    "label" : "rich_box",
-    "weight" : "0",
-    "data" : "",
-    "rdf_mapping" : []
-  }');
+  $items['dyk_box'] = entity_import('entity_boxes_type', '{ "type" : "dyk_box", "label" : "dyk_box", "weight" : "0", "data" : "" }');
+  $items['rich_box'] = entity_import('entity_boxes_type', '{ "type" : "rich_box", "label" : "rich_box", "weight" : "0", "data" : "" }');
   return $items;
 }
 
@@ -41,6 +29,28 @@ function esd_str_default_entity_boxes_type() {
  */
 function esd_str_image_default_styles() {
   $styles = array();
+
+  // Exported image style: 340w211h.
+  $styles['340w211h'] = array(
+    'name' => '340w211h',
+    'effects' => array(
+      3 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '340',
+          'height' => '211',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
 
   // Exported image style: 340wNh.
   $styles['340wNh'] = array(
@@ -65,11 +75,11 @@ function esd_str_image_default_styles() {
     ),
   );
 
-  // Exported image style: 340w211h.
-  $styles['340w211h'] = array(
-    'name' => '340w211h',
+  // Exported image style: 580w360h.
+  $styles['580w360h'] = array(
+    'name' => '580w360h',
     'effects' => array(
-      3 => array(
+      2 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -79,8 +89,8 @@ function esd_str_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => '340',
-          'height' => '211',
+          'width' => '580',
+          'height' => '360',
         ),
         'weight' => '1',
       ),
@@ -104,28 +114,6 @@ function esd_str_image_default_styles() {
           'width' => '580',
           'height' => '',
           'upscale' => 0,
-        ),
-        'weight' => '1',
-      ),
-    ),
-  );
-
-  // Exported image style: 580w360h.
-  $styles['580w360h'] = array(
-    'name' => '580w360h',
-    'effects' => array(
-      2 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
-        'name' => 'image_scale_and_crop',
-        'data' => array(
-          'width' => '580',
-          'height' => '360',
         ),
         'weight' => '1',
       ),

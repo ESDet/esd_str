@@ -18,21 +18,6 @@ function esd_str_taxonomy_default_vocabularies() {
       'weight' => '0',
       'language' => 'und',
       'i18n_mode' => '0',
-      'rdf_mapping' => array(
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'dc:title',
-          ),
-        ),
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-      ),
     ),
     'blog_tags' => array(
       'name' => 'Tags',
@@ -43,21 +28,6 @@ function esd_str_taxonomy_default_vocabularies() {
       'weight' => '0',
       'language' => 'und',
       'i18n_mode' => '0',
-      'rdf_mapping' => array(
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'dc:title',
-          ),
-        ),
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-      ),
     ),
     'did_you_know_images' => array(
       'name' => 'Did You Know images',
@@ -68,21 +38,6 @@ function esd_str_taxonomy_default_vocabularies() {
       'weight' => '0',
       'language' => 'und',
       'i18n_mode' => '0',
-      'rdf_mapping' => array(
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'dc:title',
-          ),
-        ),
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-      ),
     ),
   );
 }

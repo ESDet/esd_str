@@ -289,13 +289,31 @@ function esd_str_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '9',
+          'weight' => '10',
         ),
         'redirect' => array(
+          'weight' => '9',
+        ),
+        'language' => array(
           'weight' => '8',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'language' => array(
+          'full' => array(
+            'weight' => '8',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '8',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__blog_entry'] = $strongarm;
@@ -340,7 +358,14 @@ function esd_str_strongarm() {
           'weight' => '4',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'language' => array(
+          'default' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__front_page_slide'] = $strongarm;
@@ -385,7 +410,14 @@ function esd_str_strongarm() {
           'weight' => '8',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'language' => array(
+          'default' => array(
+            'weight' => '8',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__media_hit'] = $strongarm;
@@ -424,10 +456,13 @@ function esd_str_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '7',
         ),
         'redirect' => array(
-          'weight' => '4',
+          'weight' => '6',
+        ),
+        'language' => array(
+          'weight' => '1',
         ),
       ),
       'display' => array(
@@ -455,7 +490,29 @@ function esd_str_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__weekly_update';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'full' => array(
+        'custom_settings' => TRUE,
+      ),
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
@@ -476,6 +533,27 @@ function esd_str_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_extended_blog_entry';
+  $strongarm->value = '1';
+  $export['i18n_node_extended_blog_entry'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_extended_front_page_slide';
+  $strongarm->value = '1';
+  $export['i18n_node_extended_front_page_slide'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_extended_media_hit';
+  $strongarm->value = 1;
+  $export['i18n_node_extended_media_hit'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_extended_page';
   $strongarm->value = '1';
   $export['i18n_node_extended_page'] = $strongarm;
@@ -483,9 +561,54 @@ function esd_str_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_blog_entry';
+  $strongarm->value = array(
+    0 => 'current',
+    1 => 'lock',
+  );
+  $export['i18n_node_options_blog_entry'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_front_page_slide';
+  $strongarm->value = array();
+  $export['i18n_node_options_front_page_slide'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_media_hit';
+  $strongarm->value = array();
+  $export['i18n_node_options_media_hit'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_options_page';
   $strongarm->value = array();
   $export['i18n_node_options_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_sync_node_type_blog_entry';
+  $strongarm->value = array();
+  $export['i18n_sync_node_type_blog_entry'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_sync_node_type_front_page_slide';
+  $strongarm->value = array();
+  $export['i18n_sync_node_type_front_page_slide'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_sync_node_type_media_hit';
+  $strongarm->value = array();
+  $export['i18n_sync_node_type_media_hit'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -505,6 +628,27 @@ function esd_str_strongarm() {
     10 => 'field_socialshareprivacy',
   );
   $export['i18n_sync_node_type_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_blog_entry';
+  $strongarm->value = '1';
+  $export['language_content_type_blog_entry'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_front_page_slide';
+  $strongarm->value = '2';
+  $export['language_content_type_front_page_slide'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_media_hit';
+  $strongarm->value = '1';
+  $export['language_content_type_media_hit'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
