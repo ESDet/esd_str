@@ -94,7 +94,7 @@ function esd_str_context_default_contexts() {
           'module' => 'views',
           'delta' => 'blog-block_1',
           'region' => 'actions',
-          'weight' => '-10',
+          'weight' => '-13',
         ),
       ),
     ),
