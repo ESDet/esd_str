@@ -66,18 +66,6 @@ function esd_str_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'boxes-learn_more' => array(
-          'module' => 'boxes',
-          'delta' => 'learn_more',
-          'region' => 'pre_content',
-          'weight' => '-8',
-        ),
-        'boxes-learn_more_es' => array(
-          'module' => 'boxes',
-          'delta' => 'learn_more_es',
-          'region' => 'pre_content',
-          'weight' => '-7',
-        ),
         'boxes-school_score_widget' => array(
           'module' => 'boxes',
           'delta' => 'school_score_widget',
@@ -101,12 +89,6 @@ function esd_str_context_default_contexts() {
           'delta' => 'did_you_know_es',
           'region' => 'post_content',
           'weight' => '5',
-        ),
-        'boxes-gcal_embed' => array(
-          'module' => 'boxes',
-          'delta' => 'gcal_embed',
-          'region' => 'actions',
-          'weight' => '-9',
         ),
         'views-blog-block_1' => array(
           'module' => 'views',
