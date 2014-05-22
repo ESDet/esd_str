@@ -604,7 +604,7 @@ function esd_str_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '5',
+        'weight' => '7',
       ),
     ),
   );
@@ -687,7 +687,7 @@ function esd_str_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '1',
+        'weight' => '',
       ),
     ),
   );
@@ -880,7 +880,7 @@ function esd_str_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'file_generic',
-        'weight' => '6',
+        'weight' => '9',
       ),
     ),
   );
@@ -992,7 +992,7 @@ function esd_str_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '4',
+        'weight' => '5',
       ),
     ),
   );
@@ -1179,7 +1179,7 @@ function esd_str_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '7',
+        'weight' => '11',
       ),
     ),
   );
@@ -1252,7 +1252,7 @@ function esd_str_field_default_fields() {
           'display_label' => 1,
         ),
         'type' => 'ssp_widget',
-        'weight' => '11',
+        'weight' => '17',
       ),
     ),
   );
@@ -1353,7 +1353,7 @@ function esd_str_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '2',
+        'weight' => '3',
       ),
     ),
   );
@@ -1453,7 +1453,7 @@ function esd_str_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '1',
+        'weight' => '2',
       ),
     ),
   );
@@ -1548,7 +1548,7 @@ function esd_str_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
@@ -1649,7 +1649,7 @@ function esd_str_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '4',
+        'weight' => '10',
       ),
     ),
   );
@@ -1686,7 +1686,12 @@ function esd_str_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'media_hit',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'title' => 'Read the full story at XXXXXXXXXX...',
+          'url' => 'enter URL here',
+        ),
+      ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -1734,7 +1739,7 @@ function esd_str_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '5',
+        'weight' => '12',
       ),
     ),
   );
@@ -1764,7 +1769,7 @@ function esd_str_field_default_fields() {
       'module' => 'file',
       'settings' => array(
         'display_default' => 0,
-        'display_field' => 1,
+        'display_field' => 0,
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -1823,7 +1828,7 @@ function esd_str_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'file_generic',
-        'weight' => '6',
+        'weight' => '14',
       ),
     ),
   );
@@ -1861,7 +1866,7 @@ function esd_str_field_default_fields() {
       'bundle' => 'media_hit',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => '"By " will be prepended automatically.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -1919,7 +1924,7 @@ function esd_str_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '3',
+        'weight' => '8',
       ),
     ),
   );
@@ -2003,100 +2008,7 @@ function esd_str_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '0',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-media_hit-field_media_hit_media'.
-  $fields['node-media_hit-field_media_hit_media'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_media_hit_media',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'file',
-      'settings' => array(
-        'display_default' => 0,
-        'display_field' => 0,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '0',
-      'type' => 'file',
-    ),
-    'field_instance' => array(
-      'bundle' => 'media_hit',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'file',
-          'settings' => array(),
-          'type' => 'file_default',
-          'weight' => '6',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'fences_wrapper' => 'div',
-      'field_name' => 'field_media_hit_media',
-      'label' => 'Media',
-      'required' => 0,
-      'settings' => array(
-        'description_field' => 0,
-        'file_directory' => '',
-        'file_extensions' => 'txt mp3 mp4 m4v mov jpg png gif pdf',
-        'max_filesize' => '',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'media',
-        'settings' => array(
-          'allowed_schemes' => array(
-            'private' => 0,
-            'public' => 'public',
-            'vimeo' => 'vimeo',
-            'youtube' => 'youtube',
-          ),
-          'allowed_types' => array(
-            'audio' => 'audio',
-            'document' => 'document',
-            'image' => 'image',
-            'video' => 'video',
-          ),
-          'browser_plugins' => array(
-            'media_default--media_browser_1' => 0,
-            'media_default--media_browser_my_files' => 0,
-            'media_internet' => 0,
-            'upload' => 0,
-            'youtube' => 0,
-          ),
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'media_generic',
-        'weight' => '7',
+        'weight' => '4',
       ),
     ),
   );
@@ -2184,7 +2096,7 @@ function esd_str_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '1',
+        'weight' => '6',
       ),
     ),
   );
@@ -2248,7 +2160,7 @@ function esd_str_field_default_fields() {
         'module' => 'socialshareprivacy',
         'settings' => array(),
         'type' => 'ssp_widget',
-        'weight' => '10',
+        'weight' => '22',
       ),
     ),
   );
@@ -2397,7 +2309,7 @@ function esd_str_field_default_fields() {
       'description' => '<ul>
 <li>Choose an image from your computer, click "Upload", and then click "Insert" button to put an image into the page body.</li>
 <li>Select one of the "580" styles to make the image responsive -- if you do this, be sure to upload an image that is at least 580 pixels wide.</li>
-<li>Enter "alt" and "title" text to describe the image - the "title" will be used as a caption below the image.</li>
+<li>Enter "Alternate text" and "Title" text to describe the image -- the "Title" will be used as a caption below the image.</li>
 </ul>',
       'display' => array(
         'default' => array(
@@ -2446,7 +2358,7 @@ function esd_str_field_default_fields() {
           'insert' => 1,
           'insert_absolute' => 0,
           'insert_class' => '',
-          'insert_default' => 'auto',
+          'insert_default' => 'image_580wNh',
           'insert_styles' => array(
             'auto' => 0,
             'icon_link' => 0,
@@ -2845,6 +2757,12 @@ function esd_str_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('"By " will be prepended automatically.');
+  t('<ul>
+<li>Choose an image from your computer, click "Upload", and then click "Insert" button to put an image into the page body.</li>
+<li>Select one of the "580" styles to make the image responsive -- if you do this, be sure to upload an image that is at least 580 pixels wide.</li>
+<li>Enter "Alternate text" and "Title" text to describe the image -- the "Title" will be used as a caption below the image.</li>
+</ul>');
   t('<ul>
 <li>Choose an image from your computer, click "Upload", and then click "Insert" button to put an image into the page body.</li>
 <li>Select one of the "580" styles to make the image responsive -- if you do this, be sure to upload an image that is at least 580 pixels wide.</li>
@@ -2859,7 +2777,6 @@ function esd_str_field_default_fields() {
   t('Image');
   t('Images');
   t('Link');
-  t('Media');
   t('Media Outlet');
   t('Placeholder for Social Share Privacy');
   t('Slide Caption');

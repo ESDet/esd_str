@@ -129,7 +129,7 @@ function esd_str_image_default_styles() {
 function esd_str_node_info() {
   $items = array(
     'blog_entry' => array(
-      'name' => t('Blog entry'),
+      'name' => t('Blog Entry'),
       'base' => 'node_content',
       'description' => t('Blog entries share time-sensitive updates on education, ESD’s work, and the coalition’s relationships in the community.'),
       'has_title' => '1',
@@ -145,7 +145,7 @@ function esd_str_node_info() {
       'help' => '',
     ),
     'media_hit' => array(
-      'name' => t('Media hit'),
+      'name' => t('Media Hit'),
       'base' => 'node_content',
       'description' => t('Each media hit records a piece of earned media (which could be online, in print, or broadcast). The content of the original piece should be included along with a link to the publisher’s website.'),
       'has_title' => '1',
@@ -163,7 +163,7 @@ function esd_str_node_info() {
     'weekly_update' => array(
       'name' => t('Weekly Update'),
       'base' => 'node_content',
-      'description' => t('Automatically generated when a Weekly Education News & Policy Update is sent in MailChimp. '),
+      'description' => t('Use when a Weekly Education News & Policy Update is sent in MailChimp. '),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
