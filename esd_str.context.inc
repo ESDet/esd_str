@@ -72,6 +72,18 @@ function esd_str_context_default_contexts() {
           'region' => 'post_content',
           'weight' => '-10',
         ),
+        'boxes-startearly' => array(
+          'module' => 'boxes',
+          'delta' => 'startearly',
+          'region' => 'post_content',
+          'weight' => '-14',
+        ),
+        'boxes-topschools' => array(
+          'module' => 'boxes',
+          'delta' => 'topschools',
+          'region' => 'post_content',
+          'weight' => '-15',
+        ),
         'boxes-school_score_es' => array(
           'module' => 'boxes',
           'delta' => 'school_score_es',

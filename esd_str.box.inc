@@ -238,5 +238,37 @@ function esd_str_default_box() {
   );
   $export['social_share'] = $box;
 
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'startearly';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'start early advert';
+  $box->options = array(
+    'body' => array(
+      'value' => '<a href="https://www.excellentschoolsdetroit.org/en/enroll-kindergarten">Enroll in Kindergarten</a>',
+      'format' => 'unfiltered_html',
+    ),
+    'additional_classes' => '',
+  );
+  $export['startearly'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'topschools';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'top schools advert';
+  $box->options = array(
+    'body' => array(
+      'value' => '<a href="https://www.excellentschoolsdetroit.org/en/top-k8-schools">Explore Detroit\'s top 31 schools</a>',
+      'format' => 'unfiltered_html',
+    ),
+    'additional_classes' => '',
+  );
+  $export['topschools'] = $box;
+
   return $export;
 }
