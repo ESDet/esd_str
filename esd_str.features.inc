@@ -45,7 +45,7 @@ function esd_str_image_default_styles() {
       3 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
+        'effect callback' => 'imageinfo_cache_effect_router',
         'dimensions callback' => 'image_resize_dimensions',
         'form callback' => 'image_resize_form',
         'summary theme' => 'image_resize_summary',
@@ -54,10 +54,12 @@ function esd_str_image_default_styles() {
         'data' => array(
           'width' => '340',
           'height' => '211',
+          '#imageinfo_cache_effect_callback' => 'image_scale_and_crop_effect',
         ),
         'weight' => '1',
       ),
     ),
+    'label' => '340w211h',
   );
 
   // Exported image style: 340wNh.
@@ -67,7 +69,7 @@ function esd_str_image_default_styles() {
       1 => array(
         'label' => 'Scale',
         'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'image_scale_effect',
+        'effect callback' => 'imageinfo_cache_effect_router',
         'dimensions callback' => 'image_scale_dimensions',
         'form callback' => 'image_scale_form',
         'summary theme' => 'image_scale_summary',
@@ -77,10 +79,12 @@ function esd_str_image_default_styles() {
           'width' => '340',
           'height' => '',
           'upscale' => 0,
+          '#imageinfo_cache_effect_callback' => 'image_scale_effect',
         ),
         'weight' => '1',
       ),
     ),
+    'label' => '340wNh',
   );
 
   // Exported image style: 580w360h.
@@ -90,7 +94,7 @@ function esd_str_image_default_styles() {
       2 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
+        'effect callback' => 'imageinfo_cache_effect_router',
         'dimensions callback' => 'image_resize_dimensions',
         'form callback' => 'image_resize_form',
         'summary theme' => 'image_resize_summary',
@@ -99,10 +103,12 @@ function esd_str_image_default_styles() {
         'data' => array(
           'width' => '580',
           'height' => '360',
+          '#imageinfo_cache_effect_callback' => 'image_scale_and_crop_effect',
         ),
         'weight' => '1',
       ),
     ),
+    'label' => '580w360h',
   );
 
   // Exported image style: 580wNh.
@@ -112,7 +118,7 @@ function esd_str_image_default_styles() {
       1 => array(
         'label' => 'Scale',
         'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'image_scale_effect',
+        'effect callback' => 'imageinfo_cache_effect_router',
         'dimensions callback' => 'image_scale_dimensions',
         'form callback' => 'image_scale_form',
         'summary theme' => 'image_scale_summary',
@@ -122,10 +128,12 @@ function esd_str_image_default_styles() {
           'width' => '580',
           'height' => '',
           'upscale' => 0,
+          '#imageinfo_cache_effect_callback' => 'image_scale_effect',
         ),
         'weight' => '1',
       ),
     ),
+    'label' => '580wNh',
   );
 
   return $styles;

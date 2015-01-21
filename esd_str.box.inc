@@ -211,7 +211,7 @@ function esd_str_default_box() {
     'body' => array(
       'value' => '<div class="score-right">
 <p>We review Detroit schools each year and produce a scorecard that measures school quality. Find results for the schools near you.</p>
-<form id="school-zip-code-form" target="_blank" action="http://scorecard.excellentschoolsdetroit.org/schools"><input type="submit" id="school-zip-code-submit" /><label for="school-zip-code">Search by Zip Code:</label><input name="loc" type="text" id="school-zip-code" /></form>
+<form id="school-zip-code-form" target="_blank" action="http://scorecard.excellentschoolsdetroit.org/schools"><input type="submit" id="school-zip-code-submit" alt="Search the scorecard" title="Search the scorecard" /><label for="school-zip-code">Search by Zip Code:</label><input name="loc" type="text" id="school-zip-code" /></form>
 <!-- 
 <form id="school-name-form" target="_blank"  action="http://scorecard.excellentschoolsdetroit.org/schools"><input type="submit" id="school-name-submit" /><label for="school-name">Search by School Name:</label><input type="text" id="school-name" /></form>
  -->

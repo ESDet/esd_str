@@ -659,6 +659,108 @@ function esd_str_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_disable_on_demand_generation';
+  $strongarm->value = 0;
+  $export['imageinfo_cache_disable_on_demand_generation'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_field_blog_images';
+  $strongarm->value = array(
+    '340w211h' => '340w211h',
+    '340wNh' => '340wNh',
+    '580w360h' => '580w360h',
+    '580wNh' => '580wNh',
+    'flexslider_full' => 'flexslider_full',
+    'flexslider_thumbnail' => 'flexslider_thumbnail',
+    'large' => 'large',
+    'media_thumbnail' => 'media_thumbnail',
+    'medium' => 'medium',
+  );
+  $export['imageinfo_cache_field_blog_images'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_field_blog_media';
+  $strongarm->value = array(
+    '340w211h' => '340w211h',
+    '340wNh' => '340wNh',
+    '580wNh' => '580wNh',
+    'flexslider_full' => 'flexslider_full',
+    'flexslider_thumbnail' => 'flexslider_thumbnail',
+    'large' => 'large',
+    'media_thumbnail' => 'media_thumbnail',
+    'thumbnail' => 'thumbnail',
+  );
+  $export['imageinfo_cache_field_blog_media'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_field_dyk_image';
+  $strongarm->value = array();
+  $export['imageinfo_cache_field_dyk_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_field_facebook_source';
+  $strongarm->value = array();
+  $export['imageinfo_cache_field_facebook_source'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_field_images';
+  $strongarm->value = array(
+    '340w211h' => '340w211h',
+    '340wNh' => '340wNh',
+    '580w360h' => '580w360h',
+    '580wNh' => '580wNh',
+    'flexslider_full' => 'flexslider_full',
+    'flexslider_thumbnail' => 'flexslider_thumbnail',
+    'large' => 'large',
+    'media_thumbnail' => 'media_thumbnail',
+    'medium' => 'medium',
+  );
+  $export['imageinfo_cache_field_images'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_field_slide_image';
+  $strongarm->value = array(
+    'flexslider_full' => 'flexslider_full',
+    'flexslider_thumbnail' => 'flexslider_thumbnail',
+  );
+  $export['imageinfo_cache_field_slide_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_getimagesize';
+  $strongarm->value = 0;
+  $export['imageinfo_cache_getimagesize'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_strip_image_token';
+  $strongarm->value = 0;
+  $export['imageinfo_cache_strip_image_token'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imageinfo_cache_use_httprl';
+  $strongarm->value = FALSE;
+  $export['imageinfo_cache_use_httprl'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_blog_entry';
   $strongarm->value = '1';
   $export['language_content_type_blog_entry'] = $strongarm;
