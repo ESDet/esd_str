@@ -282,18 +282,7 @@ function esd_str_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'mailchimp_lists-get_email_updates' => array(
-          'module' => 'mailchimp_lists',
-          'delta' => 'get_email_updates',
-          'region' => 'actions',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
+  $context->reactions = array();
   $context->condition_mode = 0;
 
   // Translatables
@@ -435,17 +424,11 @@ function esd_str_context_default_contexts() {
           'region' => 'footer_first',
           'weight' => '-8',
         ),
-        'menu_block-4' => array(
-          'module' => 'menu_block',
-          'delta' => '4',
-          'region' => 'footer_first',
-          'weight' => '-7',
-        ),
         'menu_block-5' => array(
           'module' => 'menu_block',
           'delta' => '5',
           'region' => 'footer_second',
-          'weight' => '-9',
+          'weight' => '-10',
         ),
         'boxes-social_share' => array(
           'module' => 'boxes',

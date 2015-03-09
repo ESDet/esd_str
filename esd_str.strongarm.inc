@@ -644,8 +644,7 @@ function esd_str_strongarm() {
     6 => 'sticky',
     7 => 'revision',
     8 => 'field_page_file',
-    9 => 'field_page_media',
-    10 => 'field_socialshareprivacy',
+    9 => 'field_socialshareprivacy',
   );
   $export['i18n_sync_node_type_page'] = $strongarm;
 
@@ -821,9 +820,7 @@ function esd_str_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_page';
   $strongarm->value = array(
-    0 => 'menu-learn',
-    1 => 'main-menu',
-    2 => 'menu-take-action',
+    0 => 'menu-main-navigation',
   );
   $export['menu_options_page'] = $strongarm;
 
@@ -859,7 +856,7 @@ function esd_str_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_page';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'menu-main-navigation:0';
   $export['menu_parent_page'] = $strongarm;
 
   $strongarm = new stdClass();
