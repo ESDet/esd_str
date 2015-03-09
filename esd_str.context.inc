@@ -405,17 +405,11 @@ function esd_str_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'menu_block-1' => array(
+        'menu_block-10' => array(
           'module' => 'menu_block',
-          'delta' => '1',
+          'delta' => '10',
           'region' => 'branding',
-          'weight' => '-10',
-        ),
-        'menu_block-2' => array(
-          'module' => 'menu_block',
-          'delta' => '2',
-          'region' => 'branding',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
         'system-main' => array(
           'module' => 'system',
